@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using ClinkedInPersonal.DataAccess;
 using ClinkedInPersonal.Models;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 
 namespace ClinkedInPersonal.Controllers
 {
@@ -14,6 +14,13 @@ namespace ClinkedInPersonal.Controllers
     public class ClinkersController : ControllerBase
     {
         ClinkerRepository _repository = new ClinkerRepository();
+
+        [HttpGet]
+        public IActionResult GetAllClinkers()
+        {
+            var allClinkers = _repository.GetAllClinkers();
+            return Ok(allClinkers);
+        }
 
         [HttpPost]
         public IActionResult AddClinker(Clinker clinkerToAdd)

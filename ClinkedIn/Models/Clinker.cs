@@ -15,5 +15,14 @@ namespace ClinkedInPersonal.Models
         public List<Service> Services { get; set; }
         public List<Clinker> Friends { get; set; }
         public List<Clinker> Enemies { get; set; }
+        public DateTime Sentence { get; set; }
+
+        public Clinker()
+        {
+            Interests = new List<string>();
+            Services = new List<Service>();
+            Friends = new List<Clinker>();
+            Enemies = new List<Clinker>();
+        }
     }
 }
