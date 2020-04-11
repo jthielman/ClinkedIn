@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ClinkedIn.Controllers
+namespace ClinkedInPersonal.Controllers
 {
-    [Route("api/clinkedIn")]
+    [Route("api/services")]
     [ApiController]
-    public class ClinkedInController : ControllerBase
+    public class ServicesController : ControllerBase
     {
     }
 }
